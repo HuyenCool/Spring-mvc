@@ -30,6 +30,7 @@ public class DishConverter {
 		dishDTO.setThumbnail(dishEntity.getThumbnail());
 		dishDTO.setShortdescription(dishEntity.getShortdescription());
 		dishDTO.setContent(dishEntity.getContent());
+		dishDTO.setCategoryCode(dishEntity.getCategory().getCode());
 		dishDTO.setCreatedBy(dishEntity.getCreatedBy());
 		dishDTO.setModifiedBy(dishEntity.getModifiedBy());
 		dishDTO.setCreatedDate(dishEntity.getCreatedDate());

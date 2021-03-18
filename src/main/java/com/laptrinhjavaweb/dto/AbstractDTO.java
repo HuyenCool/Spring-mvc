@@ -1,7 +1,6 @@
 package com.laptrinhjavaweb.dto;
 
 import java.util.List;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -61,9 +60,7 @@ public class AbstractDTO<T> {
 	public void setListResult(List<T> listResult) {
 		this.listResult = listResult;
 	}
-	public int getPage() {
-		return page;
-	}
+	
 	public void setPage(Integer page) {
 		this.page = page;
 	}

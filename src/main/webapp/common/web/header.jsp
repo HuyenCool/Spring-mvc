@@ -1,4 +1,4 @@
-<%@ page import="com.laptrinhjavaweb.util.SecurityUtils" %>
+<%@ page import="com.laptrinhjavaweb.util.SecurityUtils"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@include file="/common/taglib.jsp"%>
@@ -23,18 +23,21 @@
 					<li class="nav-item active"><a class="nav-link" href="#">Home
 							<span class="sr-only">(current)</span>
 					</a></li>
-					
-					<security:authorize access = "isAnonymous()">
-						<li class="nav-item"><a class="nav-link" href='<c:url value="/dang-nhap"/>'>Đăng nhập</a></li>
-						<li class="nav-item"><a class="nav-link" href='<c:url value="/dang-ki"/>'>Đăng kí</a></li>
+
+					<security:authorize access="isAnonymous()">
+						<li class="nav-item"><a class="nav-link"
+							href='<c:url value="/dang-nhap"/>'>Đăng nhập</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href='<c:url value="/dang-ki"/>'>Đăng kí</a></li>
 					</security:authorize>
-					
-					
-					<security:authorize access = "isAuthenticated()">
+
+
+					<security:authorize access="isAuthenticated()">
 						<li class="nav-item"><a class="nav-link" href='#'>WellCome,<%=SecurityUtils.getPrincipal().getFullName()%></a></li>
-						<li class="nav-item"><a class="nav-link" href='<c:url value="/thoat"/>'>Thoát</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href='<c:url value="/thoat"/>'>Thoát</a></li>
 					</security:authorize>
-				
+
 
 				</ul>
 			</div>

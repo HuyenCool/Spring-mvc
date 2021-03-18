@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@include file="/common/taglib.jsp"%>
+<%@include file="/common/taglib.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +34,8 @@
 
 	<!-- Bootstrap core JavaScript -->
 	<script src="<c:url value='/template/web/jquery/jquery.min.js' />"></script>
-	<script src="<c:url value='/template/web/bootstrap/js/bootstrap.bundle.min.js' />"></script>
+	<script
+		src="<c:url value='/template/web/bootstrap/js/bootstrap.bundle.min.js' />"></script>
 
 </body>
 </html>

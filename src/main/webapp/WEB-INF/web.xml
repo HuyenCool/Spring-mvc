@@ -36,7 +36,7 @@
 		<servlet-name>dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	
+
 
 	<!-- Declare Spring Security Filter -->
 	<filter>
@@ -67,7 +67,7 @@
 		<dispatcher>FORWARD</dispatcher>
 	</filter-mapping>
 
-	
+
 	<session-config>
 		<tracking-mode>COOKIE</tracking-mode>
 	</session-config>

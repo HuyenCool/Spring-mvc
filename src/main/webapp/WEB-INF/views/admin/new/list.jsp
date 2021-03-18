@@ -26,7 +26,7 @@
 					<ul class="breadcrumb">
 						<li><i class="ace-icon fa fa-home home-icon"></i> <a href="#">Trang
 								chủ</a></li>
-						<li class="active">Chỉnh sửa bài viết</li>
+						<li class="active">Món ăn</li>
 
 					</ul>
 

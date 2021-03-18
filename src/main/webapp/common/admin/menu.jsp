@@ -49,19 +49,20 @@
 
 			<li class=""><a href="#" class="dropdown-toggle"> <i
 					class="menu-icon fa fa-list"></i> <span class="menu-text">
-						Quản lí bài viết </span> <b class="arrow fa fa-angle-down"></b>
+						Quản lí  </span> <b class="arrow fa fa-angle-down"></b>
 			</a> <b class="arrow"></b>
 
 				<ul class="submenu">
-					<li><a href='<c:url value="/admin/mon-an/danh-sach?page=1&limit=2"/>'> 
-					<i class="menu-icon fa fa-caret-right"></i> Danh sách món ăn
+					<li><a
+						href='<c:url value="/admin/mon-an/danh-sach?page=1&limit=2"/>'>
+							<i class="menu-icon fa fa-caret-right"></i> Danh sách món ăn
 					</a> <b class="arrow"></b></li>
-					<li><a href='<c:url value="/admin/the-loai/danh-sach?page=1&limit=2"/>'> 
-					<i class="menu-icon fa fa-caret-right"></i> Danh sách thể loại
+					<li><a
+						href='<c:url value="/admin/the-loai/danh-sach?page=1&limit=2"/>'>
+							<i class="menu-icon fa fa-caret-right"></i> Danh sách thể loại
 					</a> <b class="arrow"></b></li>
 
-				</ul>
-			</li>
+				</ul></li>
 		</ul>
 
 		<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">

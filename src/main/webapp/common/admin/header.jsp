@@ -1,4 +1,4 @@
-<%@ page import="com.laptrinhjavaweb.util.SecurityUtils" %>
+<%@ page import="com.laptrinhjavaweb.util.SecurityUtils"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@include file="/common/taglib.jsp"%>
@@ -21,8 +21,10 @@
 				class="navbar-buttons navbar-header pull-right collapse navbar-collapse"
 				role="navigation">
 				<ul class="nav ace-nav">
-					<li class="light-blue dropdown-modal"><a data-toggle="dropdown" href="#" class="dropdown-toggle"> 
-					Xin chào,<%=SecurityUtils.getPrincipal().getFullName()%> </a>
+					<li class="light-blue dropdown-modal"><a
+						data-toggle="dropdown" href="#" class="dropdown-toggle"> Xin
+							chào,<%=SecurityUtils.getPrincipal().getFullName()%>
+					</a>
 					<li class="light-blue dropdown-modal"><a
 						href='<c:url value="/thoat"/>'> <i
 							class="ace-icon fa fa-power-off"></i> Thoát

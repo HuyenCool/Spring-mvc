@@ -30,8 +30,8 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script
 	src="<c:url value='/template/paging/jquery.twbsPagination.js' />"></script>
-	
-<script src="<c:url value='/ckeditor/ckeditor.js' />"></script>	
+
+<script src="<c:url value='/ckeditor/ckeditor.js' />"></script>
 
 <!-- sweetalert -->
 <script

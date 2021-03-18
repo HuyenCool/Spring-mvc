@@ -87,6 +87,7 @@ public class DishService implements IDishService {
 	@Override
 	public DishDTO findOne(Long id) {
 		DishEntity dishEntity = dishRepository.findOne(id);
+		System.out.print("Huyennn" + dishEntity.getCategory().getCode());
 		return dishConverter.toDishDTO(dishEntity);
 	}
 

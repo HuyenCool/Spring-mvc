@@ -22,10 +22,10 @@
 
 	<context:component-scan
 		base-package="com.laptrinhjavaweb.controller, com.laptrinhjavaweb.admin.api" />
-		
+
 	<mvc:annotation-driven />
 
-	
+
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 
@@ -34,9 +34,11 @@
 
 	</bean>
 
-	
-	<mvc:resources mapping="/template/**" location="/template/" />
-	<mvc:resources mapping="/ckeditor/**" location="/ckeditor/" />
 
-	
+	<mvc:resources mapping="/template/**"
+		location="/template/" />
+	<mvc:resources mapping="/ckeditor/**"
+		location="/ckeditor/" />
+
+
 </beans>

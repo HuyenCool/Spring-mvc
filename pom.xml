@@ -58,7 +58,7 @@
 			<artifactId>spring-context-support</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
-		
+
 
 		<!-- spring aspects -->
 		<dependency>

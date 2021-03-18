@@ -18,14 +18,13 @@
 				</script>
 
 				<ul class="breadcrumb">
-					<li><i class="ace-icon fa fa-home home-icon"></i> <a href="#">Trang chủ</a>
-					</li>
-					
+					<li><i class="ace-icon fa fa-home home-icon"></i> <a href="#">Trang
+							chủ</a></li>
+
 				</ul>
 				<!-- /.breadcrumb -->
 				<div class="page-content">
-					<div class="col-xs-12">
-					</div>
+					<div class="col-xs-12"></div>
 				</div>
 			</div>
 		</div>

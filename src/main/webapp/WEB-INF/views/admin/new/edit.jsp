@@ -3,6 +3,7 @@
 <%@include file="/common/taglib.jsp"%>
 <c:url var="APIurl" value="/api/mon-an" />
 <c:url var="NewURL" value="/admin/mon-an/chinh-sua" />
+<c:url var="NewURL1" value="/admin/mon-an/danh-sach" />
 <html>
 <head>
 <title>Chỉnh sửa bài viết</title>
@@ -87,8 +88,7 @@
 								<label class="col-sm-3 control-label no-padding-right">Nội
 									dung</label>
 								<div class="col-sm-9">
-									<textarea  rows="" cols="" id="content"
-										name="content"
+									<textarea rows="" cols="" id="content" name="content"
 										style="margin: 0px; width: 815px; height: 157px;">${dish.content}</textarea>
 
 								</div>
@@ -154,7 +154,7 @@
             dataType: 'json',
             success: function (result) {
             	
-            	window.location.href = "${NewURL}?id="+result.id+"&message=insert_success";
+            	window.location.href = "${NewURL1}?id="+result.id+"&page=1&limit=2&message=insert_success";
             	
             },
             error: function (error) {
@@ -175,7 +175,7 @@
             dataType: 'json',
             success: function (result) {
             	
-            	window.location.href = "${NewURL}?id="+result.id+"&message=update_success";
+            	window.location.href = "${NewURL1}?id="+result.id+"&page=1&limit=2&message=update_success";
             },
             error: function (error) {
             	

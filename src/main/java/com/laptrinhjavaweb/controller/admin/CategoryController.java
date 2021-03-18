@@ -1,6 +1,6 @@
 package com.laptrinhjavaweb.controller.admin;
 
-import java.util.List;
+
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,57 +15,50 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.laptrinhjavaweb.dto.CategoryDTO;
-import com.laptrinhjavaweb.dto.DishDTO;
-import com.laptrinhjavaweb.service.ICategoryService;
-import com.laptrinhjavaweb.service.IDishService;
+import com.laptrinhjavaweb.service.impl.CategoryService;
 import com.laptrinhjavaweb.util.MessageUtil;
 
-@Controller(value= "dishControllerOfAdmin")
-public class DishController {
-	
-	
-	@Autowired
-	private IDishService dishService;
+
+
+@Controller(value= "categoryControllerOfAdmin")
+public class CategoryControllers {
 	
 	@Autowired
-	private  ICategoryService categoryService;
+	private CategoryService categoryService;
 	
 	@Autowired
 	private MessageUtil messageUtil;
 	
-	@RequestMapping(value = "/admin/mon-an/danh-sach", method = RequestMethod.GET)
-	public ModelAndView showList(@RequestParam("page") int page, 
-								 @RequestParam("limit") int limit, HttpServletRequest request) {
-		DishDTO dishDTO = new DishDTO();
-		dishDTO.setPage(page);
-		dishDTO.setMaxPageItem(limit);
-		ModelAndView mav = new ModelAndView("admin/new/list");
+	
+	@RequestMapping(value = "/admin/the-loai/danh-sach", method = RequestMethod.GET)
+	public ModelAndView showList(@RequestParam("page") int page, @RequestParam("limit") int limit, HttpServletRequest request) {
+		
+		CategoryDTO categoryDTO = new CategoryDTO();
+		categoryDTO.setPage(page);
+		categoryDTO.setMaxPageItem(limit);
+		ModelAndView mav = new ModelAndView("admin/category/list");
 		Pageable pageable = new PageRequest(page - 1, limit);
-		dishDTO.setListResult(dishService.findAll(pageable));
-		dishDTO.setTotalItem(dishService.getTotalItem());
-		dishDTO.setTotalPage((int) Math.ceil((double) dishDTO.getTotalItem() / dishDTO.getMaxPageItem()));
+		categoryDTO.setListResult(categoryService.findAll(pageable));
+		categoryDTO.setTotalItem(categoryService.getTotalItem());
+		categoryDTO.setTotalPage((int) Math.ceil((double) categoryDTO.getTotalItem() / categoryDTO.getMaxPageItem()));
 		if (request.getParameter("message") != null) {
 			Map<String, String> message = messageUtil.getMessage(request.getParameter("message"));
 			mav.addObject("message", message.get("message"));
 			mav.addObject("alert", message.get("alert"));
 		}
-		mav.addObject("dish",dishDTO);
+		mav.addObject("category",categoryDTO);
 		return mav;
-	}	
+	}
 	
-	@RequestMapping(value = "/admin/mon-an/chinh-sua", method = RequestMethod.GET)
+	@RequestMapping(value = "/admin/the-loai/chinh-sua", method = RequestMethod.GET)
 	public ModelAndView editDish(@RequestParam(value= "id", required = false) Long id, HttpServletRequest request) {
-		ModelAndView mav = new ModelAndView("admin/new/edit");
-		DishDTO dishDTO = new DishDTO();
+		ModelAndView mav = new ModelAndView("admin/category/edit");
+		CategoryDTO categoryDTO = new CategoryDTO();
 		if(id!= null) {
-			dishDTO= dishService.findOne((Long)id);
-			
+			categoryDTO= categoryService.findOne((Long)id);
 		}
 		
-		List<CategoryDTO> categoryDTOs = categoryService.findAll();
-		mav.addObject("categories",categoryDTOs);
-		mav.addObject("dish",dishDTO );
-		System.out.print(dishDTO.getCategoryCode());
+		mav.addObject("category",categoryDTO );
 		if(request.getParameter("message") != null) {
 			Map<String, String> message = messageUtil.getMessage(request.getParameter("message"));
 			mav.addObject("message", message.get("message"));
